@@ -50,7 +50,7 @@ describe('the text area', () => {
 
     it('when form is submitted text area gets emptied', () => {
 
-        wrapped.find('textarea').simulate('changed', {
+        wrapped.find('textarea').simulate('change', {
             target: {value: "new comment"}
         });
 
