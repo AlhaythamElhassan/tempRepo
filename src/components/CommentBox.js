@@ -1,5 +1,7 @@
 import React, {Component } from 'react';
 
+// On this page we use reacts events instead
+// which is equivalent to onChange etc
 
 class CommentBox extends Component {
 
@@ -8,8 +10,6 @@ class CommentBox extends Component {
     handleChange = (event) => {
 
         this.setState({ comment: event.target.value })
-       // this.setState({ event.key.value : event.target.value});
-
     };
 
     handleSubmit = event => {

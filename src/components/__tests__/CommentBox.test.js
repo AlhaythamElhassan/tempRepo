@@ -1,6 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+// In this file we have to use HTML events
+
 // Components
 import CommentBox from 'components/CommentBox';
 
@@ -27,3 +29,22 @@ it ('has a text area and a button', () => {
     expect(wrapped.find('button').length).toEqual(1);
 
 });
+
+
+it ('has a text area that the user can type in ', () => {
+
+    // the simulate method is used to simulate what event we want to test
+    wrapped.find('textarea').simulate('change', { target: { value: 'new comment'} });
+
+
+});
+
+/*
+ line 37 is b
+
+  handleChange = { target: { value: 'new comment'} => {
+
+        this.setState({ comment: event.target.value })
+    };
+
+*/
