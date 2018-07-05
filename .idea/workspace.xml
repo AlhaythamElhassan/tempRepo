@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27514536-8a01-4d5b-87e4-e3718a36cf00" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/CommentBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/__tests__/CommentBox.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/CommentBox.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,10 +43,11 @@
       <file leaf-file-name="CommentBox.test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/__tests__/CommentBox.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="372">
+              <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#225#517#0" />
               </folding>
             </state>
           </provider>
@@ -57,8 +56,8 @@
       <file leaf-file-name="CommentBox.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/CommentBox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="10" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="217">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -193,12 +192,12 @@
       <option name="presentableId" value="Default" />
       <updated>1530736015134</updated>
       <workItem from="1530736016467" duration="3674000" />
-      <workItem from="1530778014169" duration="16648000" />
+      <workItem from="1530778014169" duration="19393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20322000" />
+    <option name="totallyTimeSpent" value="23067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -229,6 +228,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/index.js">
@@ -357,17 +361,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CommentBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="10" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="217">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/__tests__/CommentBox.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state relative-caret-position="372">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#225#517#0" />
           </folding>
         </state>
       </provider>
