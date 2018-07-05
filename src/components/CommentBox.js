@@ -13,7 +13,6 @@ class CommentBox extends Component {
     };
 
     handleSubmit = event => {
-
         event.preventDefault();
 
         // Call an action creator
