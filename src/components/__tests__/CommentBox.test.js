@@ -5,11 +5,20 @@ import { mount } from 'enzyme';
 
 // Components
 import CommentBox from 'components/CommentBox';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from 'reducers';
+
 
 let wrapped;
 
 beforeEach(() => {
-    wrapped = mount(<CommentBox />);
+
+    wrapped = mount(
+        <Provider store={createStore(reducers, {}, applyMiddleware(asdasdd))}>
+            <CommentBox />
+        </Provider>
+    );
 });
 
 // Remove the component from the DOM

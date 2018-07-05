@@ -1,4 +1,6 @@
-import React, {Component } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from 'actions';
 
 // On this page we use reacts events instead
 // which is equivalent to onChange etc
@@ -13,10 +15,13 @@ class CommentBox extends Component {
     };
 
     handleSubmit = event => {
+
         event.preventDefault();
 
         // Call an action creator
         // and save the comment
+
+        this.prop.saveComment(this.state.comment);
 
         this.setState({ comment: '' });
 
@@ -38,4 +43,4 @@ class CommentBox extends Component {
 
 }
 
-export default CommentBox;
+export default connect(null, actions)(CommentBox);
