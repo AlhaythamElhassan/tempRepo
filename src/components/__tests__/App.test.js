@@ -2,33 +2,36 @@ import React from 'react';
 import App from '../App';
 import { shallow, mount, render, configure } from 'enzyme';
 
-//Components
-import CommentBox from '../CommentBox';
-import CommentList from '../CommentList';
+// Components
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 
-// shallow is a function that renders just the component and none of it's children
-it ('shows a comment box', () => {
 
+let wrapped;
+
+// Common set-up logic
+// before every single test
+beforeEach(() => {
+
+    // shallow is a function that renders just the component and none of it's children
     // wrapped is the same as component
-    const wrapped = shallow(<App />);
+    wrapped = shallow(<App />);
+});
 
-    console.log(wrapped.find(CommentBox));
+it ('shows a comment box', () => {
 
     // find is an array
     // Length means
     expect(wrapped.find(CommentBox).length).toEqual(1);
 
-
 });
 
 
-it("shows at least one comment list on page ", () => {
+it('shows at least one comment list on page ', () => {
 
-    const component = shallow(<App/>);
+    console.log(wrapped.find(CommentList));
 
-    console.log(component.find(CommentList));
-
-    expect(component.find(CommentList).length).toEqual(1);
+    expect(wrapped.find(CommentList).length).toEqual(1);
 
 });
 
