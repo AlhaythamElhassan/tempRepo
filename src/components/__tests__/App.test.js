@@ -15,6 +15,7 @@ it ('shows a comment box', () => {
     console.log(wrapped.find(CommentBox));
 
     // find is an array
+    // Length means
     expect(wrapped.find(CommentBox).length).toEqual(1);
 
 
