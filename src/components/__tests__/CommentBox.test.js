@@ -1,7 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
-
-// In this file we have to use HTML events
+import { shallow, mount } from 'enzyme';
+// Mount is for full Document Full Rendering
 
 // Components
 import CommentBox from 'components/CommentBox';
@@ -9,27 +8,24 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from 'reducers';
 
+import Root from 'Root';
 
 let wrapped;
 
 beforeEach(() => {
-
     wrapped = mount(
-        <Provider store={createStore(reducers, {}, applyMiddleware(asdasdd))}>
+        <Root store={createStore(reducers, {} )}>
             <CommentBox />
-        </Provider>
+        </Root>
     );
 });
 
 // Remove the component from the DOM
 afterEach(() => {
-    wrapped.unmount();
+    wrapped.unmount;
 });
 
 it ('has a text area and a button', () => {
-
-    // Mount is for full Document Full Rendering
-    const wrapped = mount(<CommentBox/>);
 
     console.log(wrapped.find('textarea'));
     console.log(wrapped.find('button'));
@@ -41,7 +37,6 @@ it ('has a text area and a button', () => {
 
 describe('the text area', () => {
 
-    //
     beforeEach(() => {
 
         // the simulate method is used to simulate what event we want to test
@@ -57,30 +52,28 @@ describe('the text area', () => {
     });
 
 
-    it('when form is submitted text area gets emptied', () => {
+    it ('when form is submitted text area gets emptied', () => {
 
         wrapped.find('textarea').simulate('change', {
             target: {value: "new comment"}
         });
 
+        // Update the component so that it has the new text
         wrapped.update();
 
-        expect(wrapped.find('textarea').prop('value')).toEqual()
+        // When we update the component it should have new comment in the text area
+        expect(wrapped.find('textarea').prop('value')).toEqual('new comment')
 
+        // simulate the clicking of the submit button
         wrapped.find('form').simulate('submit');
+
+        // Update so the effects of clicking the submit button are inplace
         wrapped.update();
 
-        expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
+        // the text area should not be empty
+        expect(wrapped.find('textarea').prop('value')).toEqual('');
 
     });
+
 });
 
-/*
- line 37 is b
-
-  handleChange = { target: { value: 'new comment'} => {
-
-        this.setState({ comment: event.target.value })
-    };
-
-*/

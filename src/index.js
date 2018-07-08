@@ -7,11 +7,13 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from 'reducers';
 
+import Root from 'Root';
+
 // Searches the index.html in public folder
 ReactDOM.render(
-    <Provider store={createStore(reducers, {})}>
+    <Root store={createStore(reducers, {})}>
         <App/>
-    </Provider>,
+    </Root>,
     document.querySelector('#root')
 );
 
