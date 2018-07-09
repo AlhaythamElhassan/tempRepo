@@ -9,6 +9,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from 'reducers';
 
+import Root from 'Root';
 
 let wrapped;
 
@@ -26,6 +27,7 @@ beforeEach(()  => {
 });
 
 it ('create one LI per comment', () => {
+
     expect(wrapped.find('li').length).toEqual(2);
 });
 

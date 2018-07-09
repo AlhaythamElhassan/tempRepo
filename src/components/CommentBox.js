@@ -6,11 +6,9 @@ import * as actions from 'actions';
 // which is equivalent to onChange etc
 
 class CommentBox extends Component {
-
     state = { comment : '' };
 
     handleChange = (event) => {
-
         this.setState({ comment: event.target.value })
     };
 
@@ -21,7 +19,7 @@ class CommentBox extends Component {
         // Call an action creator
         // and save the comment
 
-       // this.prop.saveComment(this.state.comment);
+        this.prop..save.saveComment(this.state.comment);
 
         this.setState({ comment: '' });
 
