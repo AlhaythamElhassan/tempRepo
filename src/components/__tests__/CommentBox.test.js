@@ -31,7 +31,7 @@ it ('has a text area and a button', () => {
     console.log(wrapped.find('button'));
 
     expect(wrapped.find('textarea').length).toEqual(1);
-    expect(wrapped.find('button').length).toEqual(1);
+    expect(wrapped.find('button').length).toEqual(2);
 
 });
 
@@ -49,6 +49,13 @@ describe('the text area', () => {
     it('has a text area that the user can type in ', () => {
 
         expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
+    });
+
+    it('has a text area and two buttons', () => {
+
+        expect(wrapped.find('textarea').length).toEqual(1);
+        expect(wrapped.find('button').length).toEqual(2);
+
     });
 
 
