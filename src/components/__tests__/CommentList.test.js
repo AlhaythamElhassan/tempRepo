@@ -33,6 +33,8 @@ it ('create one LI per comment', () => {
 
 it ('shows the text for each comment', () => {
 
- //   expect(wrapped.find('li').text('Comment 1')).toEqual(1);
+    expect(wrapped.render().text()).toContain('Comment 1');
+    expect(wrapped.render().text()).toContain('Comment 2');
+    //expect(wrapped.find('li').text('Comment 1')).toEqual(1);
 
 });

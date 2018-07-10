@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CommentBox from "./CommentBox";
 import { connect } from 'react-redux';
 
 
@@ -9,9 +8,11 @@ class CommentList extends Component {
 
         return this.props.comments.map(comment => {
 
-            return <li key={ comment } > { comment } </li>;
+            console.log(comment);
 
-        })
+            return <li key={ comment }> { comment } </li>;
+
+        });
     }
 
     render() {
@@ -28,7 +29,6 @@ class CommentList extends Component {
 }
 
 function mapStateToProps(state) {
-
     return { comments: state.comments }
 }
 

@@ -19,7 +19,5 @@ ReactDOM.render(
 
 
 /*
-
     Jest makes our windows environment similar to the Browser environment
-
 */

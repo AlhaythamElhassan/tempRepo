@@ -1,5 +1,5 @@
 import commentsReducer from 'reducers/comments';
-import { SAVE_COMMENT } from "../../actions/types";
+import { SAVE_COMMENT } from "actions/types";
 
 
 it('handles acions of type SAVE_COMMENT', () => {
@@ -11,6 +11,14 @@ it('handles acions of type SAVE_COMMENT', () => {
 
    const newState = commentsReducer([], action);
 
-    expect
+   expect(newState).toEqual(['New Comment']);
+
+});
+
+it ('handles actions with unknown type', () => {
+
+  const newState =  commentsReducer([], { type: "readysteady" });
+
+  expect(newState).toEqual([]);
 
 });

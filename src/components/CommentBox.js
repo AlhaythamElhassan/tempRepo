@@ -6,6 +6,7 @@ import * as actions from 'actions';
 // which is equivalent to onChange etc
 
 class CommentBox extends Component {
+
     state = { comment : '' };
 
     handleChange = (event) => {
@@ -17,9 +18,9 @@ class CommentBox extends Component {
         event.preventDefault();
 
         // Call an action creator
-        // and save the comment
+        // and save the comments
 
-       // this.prop.saveComment(this.state.comment);
+        this.props.saveComment(this.state.comment);
 
         this.setState({ comment: '' });
 
@@ -27,18 +28,27 @@ class CommentBox extends Component {
 
 
     render() {
+
         return (
-            <form onSubmit={this.handleSubmit}>
-                <h4>Add a Comment </h4>
-                <textarea onChange={this.handleChange} value={this.state.comment}/>
-                <div>
-                    <button>Submit Comment</button>
-                </div>
-            </form>
+
+            <div>
+
+                <form onSubmit={this.handleSubmit}>
+                    <h4>Add a Comment </h4>
+                    <textarea onChange={this.handleChange} value={this.state.comment}/>
+                    <div>
+                        <button>Submit Comment</button>
+                    </div>
+                </form>
+
+                <button onClick={this.props.fetchComments}> Fetch Comments</button>
+            </div>
 
         );
     }
 
 }
 
-export default connect(null, actions)(CommentBox);
+// 1st args mapStateToPropsFunction
+// 2nd args actions for the action creators
+export default connect(null,actions)(CommentBox);
