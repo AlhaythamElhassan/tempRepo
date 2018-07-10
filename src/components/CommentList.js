@@ -8,9 +8,7 @@ class CommentList extends Component {
 
         return this.props.comments.map(comment => {
 
-            console.log(comment);
-
-            return <li key={ comment }> { comment } </li>;
+            return <li key={comment}> {comment} </li>;
 
         });
     }
@@ -19,6 +17,7 @@ class CommentList extends Component {
 
         return (
             <div>
+                <h1>Comment List </h1>
                 <ul>
                     {this.renderComments()}
                 </ul>

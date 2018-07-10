@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 
+import requireAuth from 'components/requireAuth';
+
 // On this page we use reacts events instead
 // which is equivalent to onChange etc
 
@@ -46,9 +48,11 @@ class CommentBox extends Component {
 
         );
     }
-
 }
+
+
+
 
 // 1st args mapStateToPropsFunction
 // 2nd args actions for the action creators
-export default connect(null,actions)(CommentBox);
+export default connect(null,actions)(requireAuth(CommentBox));

@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import {BrowserRouter, Route } from 'react-router-dom';
+import Root from 'Root';
+import App from 'components/App';
 
 // Set-up redux
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from 'reducers';
 
-import Root from 'Root';
-
 // Searches the index.html in public folder
 ReactDOM.render(
     <Root store={createStore(reducers, {})}>
-        <App/>
+        <BrowserRouter>
+             <Route path="/" component={App} />
+        </BrowserRouter>
     </Root>,
     document.querySelector('#root')
 );
